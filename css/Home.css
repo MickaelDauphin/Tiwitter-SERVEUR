@@ -1,0 +1,233 @@
+body {
+    background-image :url(../images/background2.jpg);
+}
+.centered {
+    text-align:center;
+}
+
+.button{
+    padding: 14px;
+
+    width : 100%;
+
+    cursor: pointer;
+
+    border: 1px solid #bbb;
+
+    overflow: visible;
+
+    font: bold 13px arial, helvetica, sans-serif;
+
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+    background-image: linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+
+    -webkit-transition: background-color .2s ease-out;
+    -moz-transition: background-color .2s ease-out;
+    -ms-transition: background-color .2s ease-out;
+    -o-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+
+    color: #fff;
+
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+
+    background-color: #febf53;
+
+    border-color: #febf53;
+
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+}
+.button:hover{
+    background-color: #e8c270;
+}
+
+.button:active{
+    background: #ffb22e;
+}
+
+.buttonTiwiter{
+    padding: 14px;
+
+    width : 100%;
+
+    cursor: pointer;
+
+    border: 1px solid #bbb;
+
+    overflow: visible;
+
+    font: bold 13px arial, helvetica, sans-serif;
+
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+    background-image: linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+
+    -webkit-transition: background-color .2s ease-out;
+    -moz-transition: background-color .2s ease-out;
+    -ms-transition: background-color .2s ease-out;
+    -o-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+
+    color: #fff;
+
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+
+    background-color: #FF6D00;
+
+    border-color: #FF6D00;
+
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+}
+.buttonTiwiter:hover{
+    background-color: #fe5353;
+}
+
+.buttonTiwiter:active{
+    background: #fe5353;
+}
+
+
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+.group {
+    position: relative;
+    margin: 45px 0;
+}
+form {
+    width: 320px;
+    margin : 45px;
+}
+form h1 {
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+}
+input,
+textarea {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 600px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #c6c6c6;
+    resize: none;
+}
+input:focus,
+textarea:focus {
+    outline: none;
+}
+input:focus ~ label, input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: #ffb22e;
+}
+input:focus ~ .bar:before,
+textarea:focus ~ .bar:before {
+    width: 600px;
+}
+
+input[type="password"] {
+    letter-spacing: 0.3em;
+}
+
+label {
+    color: #febf53;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 300ms ease all;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 320px;
+}
+.bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: #febf53;
+    transition: 300ms ease all;
+    left: 0%;
+}
+
+
+.wrapper h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Josefin Sans',sans-serif;
+    background: linear-gradient(to right, #febf53 10%, #fe5353 50%, #febf53 60%);
+    background-size: 200% auto;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 1.5s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+h2{
+    font-size: 2em;
+    text-align: center;
+    color:white;
+}
+
+.centeredTexteArea{
+    margin-left : 32%;
+}
+.centeredButton{
+    margin-left : 39%;
+}
