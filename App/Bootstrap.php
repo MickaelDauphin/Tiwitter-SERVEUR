@@ -15,11 +15,11 @@ use App\Src\Request\Request;
 $app = new App(new ServiceContainer());
 
 $app->setService('database', new Database(
-    "127.0.0.1",
-    "micka_tiwitter",
-    "micka_tiwitter",
-    "remsmicka2019",
-    "3306"
+    getenv('MYSQL_ADDON_HOST');
+    getenv('MYSQL_ADDON_DB');
+    getenv('MYSQL_ADDON_USER');
+    getenv('MYSQL_ADDON_PASSWORD');
+    getenv('MYSQL_ADDON_PORT');
 ));
 
 $app->setService('userFinder', new UserFinder($app));
