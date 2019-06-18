@@ -63,7 +63,7 @@ class UserController extends ControllerBase
 
             }
             $user = $this->app->getService('userFinder')->findAll();
-            return $this->app->getService('render')('home', [ 'app' => $this->app,'user'=>$user]);
+            return $this->app->getService('render')('Home', [ 'app' => $this->app,'user'=>$user]);
         }
         else
             return $this->app->getService('redirect')('/');
