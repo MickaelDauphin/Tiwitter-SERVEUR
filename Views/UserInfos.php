@@ -83,7 +83,7 @@ if (isset($params['success']))
     <button class="button">Enregistrer les modifications</button>
 </form>
 
-<form action="/home">
+<form action="/Home">
     <button class="button">Retour</button>
 </form>
 
