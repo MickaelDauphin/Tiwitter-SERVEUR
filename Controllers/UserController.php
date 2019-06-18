@@ -41,7 +41,7 @@ class UserController extends ControllerBase
         if ($check == true)
         {
             $this->app->setSessionParameters('user', $this->app->getService('userFinder')->findOneByName($userInfos['username'])->toArray());
-            return $this->app->getService('redirect')('/Home');
+            return $this->app->getService('redirect')('/home');
         }
         else
             return $this->AccessDenied();
@@ -59,7 +59,7 @@ class UserController extends ControllerBase
         {
             if ($id != null)
             {
-                $this->app->getService('redirect')('/Home');
+                $this->app->getService('redirect')('/home');
 
             }
             $user = $this->app->getService('userFinder')->findAll();
@@ -186,7 +186,7 @@ class UserController extends ControllerBase
             $userId = $request->getParameters('userId');
             $this->app->getService('userFinder')->follow($userId);
 
-            return $this->app->getService('redirect')('/Home');
+            return $this->app->getService('redirect')('/home');
 
         }
         catch (\Error $e)

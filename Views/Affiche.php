@@ -36,7 +36,7 @@ if(isset($params['tiwitPosted'])) {
             <br>
             <form>
             <button class="LikeButton" href="" ">Like</button>
-            <form action="/Home/userfollowed"><button class="RetiwitButton" href="" >Retiwit</button></form>
+            <form action="/home/userfollowed"><button class="RetiwitButton" href="" >Retiwit</button></form>
         </form>
             <br><br>
         </p>
@@ -50,7 +50,7 @@ if(isset($params['tiwitPosted'])) {
 
 </body>
 <div class="centeredButton">
-    <form action="/Home">
+    <form action="/home">
         <button class="buttonReturn">Retour </button>
     </form>
 </div>
