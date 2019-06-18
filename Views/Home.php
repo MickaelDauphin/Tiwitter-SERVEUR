@@ -26,7 +26,7 @@
 
 
 
-    <form action="/Home/tiwit" method="post">
+    <form action="/home/tiwit" method="post">
     <div class="centeredTexteArea">
 
         <div class="group">
@@ -43,7 +43,7 @@
         </div>
     </form>
     <div class="centeredButton formes">
-        <form action="/Home/Affiche">
+        <form action="/home/affiche">
             <button class="buttonTiwiter">Voir les tiwits</button>
         </form>
     </div>
@@ -61,7 +61,7 @@
                     <?= $user->getUsername(); ?>
                     <br>
                     <br>
-                    <form action="/Home/userfollowed"><button class="FollowButton" href="" ">Follow </button></form>
+                    <form action="/home/userfollowed"><button class="FollowButton" href="" ">Follow </button></form>
                 </p>
 
             </tr>

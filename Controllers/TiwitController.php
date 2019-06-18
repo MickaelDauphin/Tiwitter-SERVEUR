@@ -33,10 +33,10 @@ class TiwitController extends ControllerBase
 
         if (!$result)
         {
-            $this->app->getService('redirect')('/Home');
+            $this->app->getService('redirect')('/home');
         }
        else
-           $this->app->getService('redirect')('/Home');
+           $this->app->getService('redirect')('/home');
 
     }
     /*private function TiwitPosted(){

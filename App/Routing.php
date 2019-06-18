@@ -34,14 +34,14 @@ class Routing
 
         $this->app->post('/tryRegister', [$user, 'RegisterDBHandler']);
 
-        $this->app->get('/Home', [$user, 'HomeHandler']);
+        $this->app->get('/home', [$user, 'HomeHandler']);
 
-        $this->app->get('/Home/(\d+)', [$user, 'HomeHandler']);
+        $this->app->get('/home/(\d+)', [$user, 'HomeHandler']);
 
         $this->app->get('/user', [$user, 'UserHandler']);
 
         $this->app->post('/user/update', [$user, 'UserDBUpdate']);
 
-        $this->app->post('/Home/tiwit',[$tiwit, 'TiwitDBHandler']);
+        $this->app->post('/home/tiwit',[$tiwit, 'TiwitDBHandler']);
         }
     }
