@@ -9,8 +9,8 @@
 namespace Controllers;
 
 
-use app\src\App;
-use app\src\request\Request;
+use App\Src\App;
+use App\Src\Request\Request;
 use Model\Finder\TiwitFinder;
 use Model\Gateway\TiwitGateway;
 use Controllers\UserController;

@@ -10,7 +10,7 @@ namespace Model\Finder;
 
 
 use Model\Gateway\TiwitGateway;
-use app\src\App;
+use App\Src\App;
 
 class TiwitFinder implements FinderInterface
 {
