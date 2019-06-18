@@ -18,7 +18,22 @@ class TiwitFinder implements FinderInterface
         $this->app = $app;
         $this->conn = $this->app->getService('database')->getConnection();
     }
-    public function findAll(){}
+    public function findAll(){
+        $query = $this->conn->prepare('SELECT t.id, t.utilisateur, t.contenu FROM tiwit t ORDER BY t.id'); // Création de la requête + utilisation order by pour ne pas utiliser sort
+        $query->execute(); // Exécution de la requête
+        $elements = $query->fetchAll(\PDO::FETCH_ASSOC);
+        if(count($elements)=== 0)return null;
+
+        $tiwits = [];
+        $tiwit = null;
+        foreach ($elements as $elements){
+            $tiwit = new TiwitGateway($this->app);
+            $tiwit->hydrate($elements);
+            $tiwits[] = $tiwit;
+        }
+
+        return $tiwits;
+    }
     public function findOneById($id){}
 
     public function getPost($id){

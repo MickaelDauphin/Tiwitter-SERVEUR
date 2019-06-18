@@ -2,15 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: remcr
- * Date: 14/06/2019
- * Time: 17:21
+ * Date: 17/06/2019
+ * Time: 23:07
  */
 
 namespace Model\Gateway;
 
 use App\Src\App;
 
-class TiwitGateway
+class ReTiwitGateway
 {
     private $conn;
 
@@ -20,10 +20,6 @@ class TiwitGateway
     private $utilisateur;
 
     private $contenu;
-
-    /**
-     * @return mixed
-     */
     public function getId()
     {
         return $this->id;
@@ -65,7 +61,7 @@ class TiwitGateway
         $this->conn = $app->getService('database')->getConnection();
     }
     public function insert():void{
-        $query = $this->conn->prepare('INSERT INTO tiwitter.tiwit ( utilisateur, contenu) VALUES ( :utilisateur,:contenu)');
+        $query = $this->conn->prepare('INSERT INTO tiwitter.retiwit ( utilisateur, contenu) VALUES ( :utilisateur,:contenu)');
         $executed = $query->execute([
             ':utilisateur' => $this->utilisateur,
             ':contenu' => $this->contenu,
@@ -79,7 +75,7 @@ class TiwitGateway
     {
         if (!$this->id) throw  new \Error('Instance does not exist in base');
 
-        $query = $this->conn->prepare('UPDATE tiwitter.tiwit SET utilisateur = :utilisateur, contenu = :contenu WHERE id = :id');
+        $query = $this->conn->prepare('UPDATE tiwitter.retiwit SET utilisateur = :utilisateur, contenu = :contenu WHERE id = :id');
         $exected = $query->execute([
             ':utilisateur' => $this->utilisateur,
             ':contenu' => $this->contenu,
@@ -92,5 +88,6 @@ class TiwitGateway
         $this->utilisateur = $elements['utilisateur'];
         $this->contenu = $elements['contenu'];
     }
+
 
 }
