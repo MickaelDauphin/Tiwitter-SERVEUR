@@ -65,7 +65,7 @@ class TiwitGateway
         $this->conn = $app->getService('database')->getConnection();
     }
     public function insert():void{
-        $query = $this->conn->prepare('INSERT INTO tiwitter.tiwit ( utilisateur, contenu) VALUES ( :utilisateur,:contenu)');
+        $query = $this->conn->prepare('INSERT INTO tiwit ( utilisateur, contenu) VALUES ( :utilisateur,:contenu)');
         $executed = $query->execute([
             ':utilisateur' => $this->utilisateur,
             ':contenu' => $this->contenu,
@@ -79,7 +79,7 @@ class TiwitGateway
     {
         if (!$this->id) throw  new \Error('Instance does not exist in base');
 
-        $query = $this->conn->prepare('UPDATE tiwitter.tiwit SET utilisateur = :utilisateur, contenu = :contenu WHERE id = :id');
+        $query = $this->conn->prepare('UPDATE tiwit SET utilisateur = :utilisateur, contenu = :contenu WHERE id = :id');
         $exected = $query->execute([
             ':utilisateur' => $this->utilisateur,
             ':contenu' => $this->contenu,

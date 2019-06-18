@@ -26,7 +26,7 @@ class UserFinder implements FinderInterface
 
     public function findAll()
     {
-        $query = $this->conn->prepare('SELECT DISTINCT id, username, password, firstName, familyName, email FROM tiwitter.user ORDER BY id');
+        $query = $this->conn->prepare('SELECT DISTINCT id, username, password, firstName, familyName, email FROM user ORDER BY id');
         $query->execute();
         $elements = $query->fetchAll(\PDO::FETCH_ASSOC);
 
@@ -45,7 +45,7 @@ class UserFinder implements FinderInterface
 
     public function findOneById($id)
     {
-        $query = $this->conn->prepare('SELECT id, username, password, firstName, familyName, email FROM tiwitter.user WHERE id = :id');
+        $query = $this->conn->prepare('SELECT id, username, password, firstName, familyName, email FROM user WHERE id = :id');
         $query->execute([':id' => $id]);
         $element = $query->fetch(\PDO::FETCH_ASSOC);
 
@@ -95,7 +95,7 @@ class UserFinder implements FinderInterface
     }
     public function findOneByName($strIdentity)
     {
-        $query = $this->conn->prepare('SELECT id, username, password, firstName, familyName, email FROM tiwitter.user WHERE (username = :name OR email = :email)');
+        $query = $this->conn->prepare('SELECT id, username, password, firstName, familyName, email FROM user WHERE (username = :name OR email = :email)');
         $query->execute([':name' => $strIdentity, ':email' => $strIdentity]);
         $element = $query->fetch(\PDO::FETCH_ASSOC);
 

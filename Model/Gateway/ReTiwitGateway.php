@@ -61,7 +61,7 @@ class ReTiwitGateway
         $this->conn = $app->getService('database')->getConnection();
     }
     public function insert():void{
-        $query = $this->conn->prepare('INSERT INTO tiwitter.retiwit ( utilisateur, contenu) VALUES ( :utilisateur,:contenu)');
+        $query = $this->conn->prepare('INSERT INTO retiwit ( utilisateur, contenu) VALUES ( :utilisateur,:contenu)');
         $executed = $query->execute([
             ':utilisateur' => $this->utilisateur,
             ':contenu' => $this->contenu,
@@ -75,7 +75,7 @@ class ReTiwitGateway
     {
         if (!$this->id) throw  new \Error('Instance does not exist in base');
 
-        $query = $this->conn->prepare('UPDATE tiwitter.retiwit SET utilisateur = :utilisateur, contenu = :contenu WHERE id = :id');
+        $query = $this->conn->prepare('UPDATE retiwit SET utilisateur = :utilisateur, contenu = :contenu WHERE id = :id');
         $exected = $query->execute([
             ':utilisateur' => $this->utilisateur,
             ':contenu' => $this->contenu,
