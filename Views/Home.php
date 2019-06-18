@@ -43,7 +43,7 @@
         </div>
     </form>
     <div class="centeredButton formes">
-        <form action="/Home/affiche">
+        <form action="/Home/Affiche">
             <button class="buttonTiwiter">Voir les tiwits</button>
         </form>
     </div>
