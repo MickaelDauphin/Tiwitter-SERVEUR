@@ -9,7 +9,7 @@ body {
     padding: 14px;
 
     width : 100%;
-
+    margin-left : 35px;
     cursor: pointer;
 
     border: 1px solid #bbb;
@@ -62,9 +62,10 @@ body {
     background: #ffb22e;
 }
 
-.buttonTiwiter{
+.buttonReturn{
     padding: 14px;
-
+    margin-left : 35px;
+    margin-top:20px;
     width : 100%;
 
     cursor: pointer;
@@ -131,11 +132,10 @@ body {
     position: relative;
     margin: 45px 0;
 }
-.formes {
+form {
     width: 320px;
-    margin : 45px;
 }
-.formes h1 {
+form h1 {
     font-size: 3em;
     font-weight: 300;
     text-align: center;
@@ -226,43 +226,53 @@ h2{
 }
 
 .centeredTexteArea{
-    margin-left : 35%;
+    margin-left : 32%;
 }
 .centeredButton{
-    margin-left : 42%;
+    margin-left : 39%;
 }
-hr {
-    width: 80%;
-    height: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    background: linear-gradient(to right, #febf53 20%, #fe5353 50%, #febf53 90%);
-    border: 0 none;
-    margin-bottom:40px;
-    margin-top:220px;
-}
-p.users {
+
+.blanc{
     color : white;
+}
+
+p.tiwits {
+    border-style: outset;
+    border-color : #febf53;
     padding: 10px 10px 10px 5px;
-    width: 30%;
+    width: 50%;
     text-align : center;
-    margin-left : 35%;
-    border: 6px solid;
-    border-image-source: linear-gradient(30deg, #febf53 40%, #fe5353 60%);
-    border-image-slice: 1;
+    margin-left : 25%;
 }
-.titreListe{
-    color: white;
-    text-align : center;
-    font-size : 30px;
-}
-.FollowButton{
+.LikeButton{
+     background-color: #fe5353;
+     border: none;
+     color: white;
+     padding: 6px 16px;
+     margin-top: 10px;
+     text-align: center;
+     cursor: pointer;
+     border-radius: 6px;
+ }
+.RetiwitButton{
     background-color: #FF6D00;
     border: none;
     color: white;
     padding: 6px 10px;
+    margin-top: 10px;
     text-align: center;
     cursor: pointer;
     border-radius: 6px;
 
+}
+.LikeButton:hover{
+    background-color: #ff9d9d;
+}
+
+.RetiwitButton:hover{
+    background: #fbba8a;
+}
+
+p2.pseudo{
+    color : #fe5353;
 }

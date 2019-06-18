@@ -59,10 +59,11 @@ class UserController extends ControllerBase
         {
             if ($id != null)
             {
-                $this->app->getService('objectFinder')->ChangeState($this->app->getService('objectFinder')->findOneById($id));
                 $this->app->getService('redirect')('/home');
+
             }
-            return $this->app->getService('render')('Home', [ 'app' => $this->app, 'objectList' => $this->app->getService('objectFinder')->findAllToJson()]);
+            $user = $this->app->getService('userFinder')->findAll();
+            return $this->app->getService('render')('home', [ 'app' => $this->app,'user'=>$user]);
         }
         else
             return $this->app->getService('redirect')('/');
@@ -176,6 +177,22 @@ class UserController extends ControllerBase
     private function UpdateCurrentUser($id)
     {
         $this->app->setSessionParameters('user', $this->app->getService('userFinder')->findOneById($id)->toArray());
+    }
+
+    public function followUserDBHandler(Request $request)
+    {
+        try
+        {
+            $userId = $request->getParameters('userId');
+            $this->app->getService('userFinder')->follow($userId);
+
+            return $this->app->getService('redirect')('/home');
+
+        }
+        catch (\Error $e)
+        {
+            return $this->app->getService('render')('404', ['reason' => "Erreur", 'details' => "Vous ne pouvez pas vous suivre vous même"]);
+        }
     }
 
 }

@@ -13,6 +13,7 @@ use app\src\App;
 use app\src\request\Request;
 use Model\Finder\TiwitFinder;
 use Model\Gateway\TiwitGateway;
+use Controllers\UserController;
 
 class TiwitController extends ControllerBase
 {
@@ -38,7 +39,27 @@ class TiwitController extends ControllerBase
            $this->app->getService('redirect')('/home');
 
     }
-    private function TiwitPosted(){
+    /*private function TiwitPosted(){
         return $this->app->getService('render')('Home', ['tiwitPosted' => true]);
+    }*/
+    public function TiwitHandler(){
+
+        if ($this->IsConnected())
+        {
+            $tiwits = $this->app->getService('tiwitFinder')->findAll();
+            return $this->app->getService('render')('Affiche', ['app' => $this->app ,'tiwits' => $tiwits]);
+        }
+        else
+            return $this->app->getService('redirect')('/');
+
+
+    }
+
+    private function IsConnected() : bool
+    {
+        if ($this->app->getSessionParameters('user') !== null)
+            return true;
+        else
+            return false;
     }
 }
