@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le :  mar. 18 juin 2019 à 22:25
--- Version du serveur :  10.1.38-MariaDB
--- Version de PHP :  7.3.2
+-- Host: b6wmaqufmuu8fmlefl9r-mysql.services.clever-cloud.com:3306
+-- Generation Time: Jun 18, 2019 at 08:33 PM
+-- Server version: 8.0.13-3
+-- PHP Version: 7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `tiwitter`
+-- Database: `b6wmaqufmuu8fmlefl9r`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `retiwit`
+-- Table structure for table `retiwit`
 --
 
 CREATE TABLE `retiwit` (
@@ -37,7 +37,7 @@ CREATE TABLE `retiwit` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `tiwit`
+-- Table structure for table `tiwit`
 --
 
 CREATE TABLE `tiwit` (
@@ -47,29 +47,18 @@ CREATE TABLE `tiwit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `tiwit`
+-- Dumping data for table `tiwit`
 --
 
 INSERT INTO `tiwit` (`id`, `utilisateur`, `contenu`) VALUES
-(1, '7', 'bla'),
-(2, '7', 'efefefe'),
-(3, '7', 'coucou toi'),
-(4, '7', 'coucou toi'),
-(5, '7', 'blavla'),
-(6, '7', 'fdfdfe'),
-(7, '7', 'hihiho'),
-(8, '7', 'zfzfe'),
-(9, '7', 'agamagohenmapoke'),
-(10, '7', 'dsdsdd'),
-(11, 'rems', 'dfdg'),
-(12, 'rems', 'eh toi la bas\r\n'),
 (13, 'rems43', 'COUCOU TOUT LE MONDE'),
-(14, 'rems43', 'COUCOU TOI');
+(14, 'rems43', 'COUCOU TOI'),
+(15, 'micka', 'TEST FINAL');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -82,17 +71,18 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `firstName`, `familyName`, `email`) VALUES
 (6, 'micka', 'e10adc3949ba59abbe56e057f20f883e', 'dauphin', 'dauphin', 'mickael@etu'),
-(7, 'rems43', 'e10adc3949ba59abbe56e057f20f883e', 'crespe', 'crespe', 're@cr');
+(7, 'rems43', 'e10adc3949ba59abbe56e057f20f883e', 'crespe', 'crespe', 're@cr'),
+(8, 'default', 'c21f969b5f03d33d43e04f8f136e7682', 'default', 'default', 'default@default');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `userfolow`
+-- Table structure for table `userfolow`
 --
 
 CREATE TABLE `userfolow` (
@@ -102,57 +92,57 @@ CREATE TABLE `userfolow` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `retiwit`
+-- Indexes for table `retiwit`
 --
 ALTER TABLE `retiwit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `tiwit`
+-- Indexes for table `tiwit`
 --
 ALTER TABLE `tiwit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `userfolow`
+-- Indexes for table `userfolow`
 --
 ALTER TABLE `userfolow`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `retiwit`
+-- AUTO_INCREMENT for table `retiwit`
 --
 ALTER TABLE `retiwit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `tiwit`
+-- AUTO_INCREMENT for table `tiwit`
 --
 ALTER TABLE `tiwit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT pour la table `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT pour la table `userfolow`
+-- AUTO_INCREMENT for table `userfolow`
 --
 ALTER TABLE `userfolow`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
