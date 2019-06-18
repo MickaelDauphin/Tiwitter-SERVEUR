@@ -20,6 +20,7 @@ class UserGateway
     private $firstName;
     private $familyName;
     private $email;
+    private $followedUser;
 
 
     public function __construct(App $app)
@@ -115,6 +116,21 @@ class UserGateway
         $this->email = $email;
     }
 
+    public function getFollowedUser()
+    {
+        if (is_array($this->followedUser))
+            return $this->followedUser;
+        else
+            return null;
+    }
+
+    /**
+     * @param mixed $followedUser
+     */
+    public function setFollowedUser($followedUser): void
+    {
+        $this->followedUser = $followedUser;
+    }
 
     /**
      * Insert an user

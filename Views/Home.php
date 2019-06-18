@@ -61,8 +61,8 @@
                     <?= $user->getUsername(); ?>
                     <br>
                     <br>
-                    <form action="/home/userfollowed"><button class="FollowButton" href="" ">Follow </button></form>
-                </p>
+                    <form action="/home/userfollowed/<?php echo $user->getId(); ?>"><button class="FollowButton" href="" ">Follow </button></form>
+                </p>e
 
             </tr>
         <?php endforeach; ?>
