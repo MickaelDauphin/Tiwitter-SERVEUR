@@ -6,7 +6,6 @@ use App\Src\App;
 use App\Src\ServiceContainer\ServiceContainer;
 use Controllers\Usercontroller;
 use Database\Database;
-use Model\Finder\ObjectFinder;
 use Model\Finder\UserFinder;
 use Model\Finder\TiwitFinder;
 use App\Src\Response\Response;
@@ -24,7 +23,7 @@ $app->setService('database', new Database(
 
 $app->setService('userFinder', new UserFinder($app));
 
-$app->setService('objectFinder', new ObjectFinder($app));
+
 $app->setService('tiwitFinder', new TiwitFinder($app));
 $app->setService('render', function(String $template, Array $params = []) {
 
