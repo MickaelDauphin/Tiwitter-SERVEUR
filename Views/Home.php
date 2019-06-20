@@ -62,7 +62,7 @@
                     <br>
                     <br>
                     <form action="/home/userfollowed/<?php echo $user->getId(); ?>"><button class="FollowButton" href="" ">Follow </button></form>
-                </p>e
+                </p>
 
             </tr>
         <?php endforeach; ?>
