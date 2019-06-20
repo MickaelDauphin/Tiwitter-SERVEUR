@@ -45,7 +45,7 @@ class Request
     public function getParameters(string $name)
     {
         if (isset($this->parameters[$name]))
-            return htmlspecialchars($this->parameters[$name]);
+            return $this->parameters[$name];
         else
             return null;
     }
